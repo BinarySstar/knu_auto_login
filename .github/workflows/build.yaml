@@ -26,7 +26,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build Windows executable
-        run: pyinstaller --onefile src/knu_auto_login.py
+        run: pyinstaller --onefile --hidden-import=cryptography src/knu_auto_login.py
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v2
@@ -51,7 +51,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build macOS executable
-        run: pyinstaller --onefile src/knu_auto_login.py
+        run: pyinstaller --onefile --hidden-import=cryptography src/knu_auto_login.py
 
       - name: Upload macOS artifact
         uses: actions/upload-artifact@v2
@@ -76,7 +76,7 @@ jobs:
           pip install pyinstaller
 
       - name: Build Linux executable
-        run: pyinstaller --onefile src/knu_auto_login.py
+        run: pyinstaller --onefile --hidden-import=cryptography src/knu_auto_login.py
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v2
