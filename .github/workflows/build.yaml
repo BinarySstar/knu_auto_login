@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller cryptography
+          pip install pyinstaller cryptography selenium webdriver_manager
 
       - name: Build Windows executable
         run: pyinstaller --onefile src/knu_auto_login.py
@@ -48,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller cryptography
+          pip install pyinstaller cryptography selenium webdriver_manager
 
       - name: Build macOS executable
         run: pyinstaller --onefile src/knu_auto_login.py
@@ -73,7 +73,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pyinstaller cryptography
+          pip install pyinstaller cryptography selenium webdriver_manager
 
       - name: Build Linux executable
         run: pyinstaller --onefile src/knu_auto_login.py
