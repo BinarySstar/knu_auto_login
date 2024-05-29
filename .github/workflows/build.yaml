@@ -26,13 +26,13 @@ jobs:
           pip install pyinstaller
 
       - name: Build Windows executable
-        run: pyinstaller --onefile your_script.py
+        run: pyinstaller --onefile src/knu_auto_login.py
 
       - name: Upload Windows artifact
         uses: actions/upload-artifact@v2
         with:
           name: Windows 전용 파일
-          path: dist/your_script.exe
+          path: dist/knu_auto_login.exe
 
   build_mac:
     runs-on: macos-latest
@@ -51,13 +51,13 @@ jobs:
           pip install pyinstaller
 
       - name: Build macOS executable
-        run: pyinstaller --onefile your_script.py
+        run: pyinstaller --onefile src/knu_auto_login.py
 
       - name: Upload macOS artifact
         uses: actions/upload-artifact@v2
         with:
           name: macOS 전용 (맥북) 파일
-          path: dist/your_script
+          path: dist/knu_auto_login
 
   build_linux:
     runs-on: ubuntu-latest
@@ -76,10 +76,10 @@ jobs:
           pip install pyinstaller
 
       - name: Build Linux executable
-        run: pyinstaller --onefile your_script.py
+        run: pyinstaller --onefile src/knu_auto_login.py
 
       - name: Upload Linux artifact
         uses: actions/upload-artifact@v2
         with:
           name: Linux 전용 파일
-          path: dist/your_script
+          path: dist/knu_auto_login
